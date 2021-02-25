@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    image: jupyter/pyspark-notebook
+    ports:
+      - "8888:8888"
+# Alter path before collon to your work directory outside of docker.
+# This volume will be synced inside and out
+    volumes:
+      - ../Notebooks:/home/jovyan/work
